@@ -1,0 +1,33 @@
+#div1 {
+    background-color:hsl(0, 80%, 50%, 1.0);
+	color: white;
+	padding:10px;}
+
+	ul {
+  list-style-type: none;
+  margin-top:50px ;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 20px 48px;
+  text-decoration: none;
+}
+
+
+.active {
+  background-color: #04AA6D;
+}
+
+table, th, td {
+  border: 1px solid white;
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">
+    
+* { box-sizing: border-box; }
+body { background-color: #f5f5f5; padding: 20px; }
+
+.card-slider {
+  width: 100%;
+  margin: 0 auto;
+
+  
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+  }
+  
+  .slick-prev-icon,
+  .slick-next-icon {
+    color: black;
+  }
+  
+  .slick-slide {
+    padding: 0 10px;
+  }
+  
+  .card {
+    position: relative;
+
+    display: flex !important;
+    flex-direction: column;
+    height: 250px;
+    width: 20%;
+
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.2);
+    background-color: white;
+
+    text-decoration: none;
+    color: rgba(0,0,0,.9);
+
+    transition: all .1s linear;
+    
+    @media screen and (max-width: 600px) {
+      height: auto;
+    }
+  }
+
+    /** Main link */
+    .card .main-link {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+      .card .main-link:focus {
+        outline: none;
+      }
+
+      .card .main-link:focus .title {
+        outline: 3px dashed orange;
+        outline-offset: -4px;
+        color: royalblue;
+        text-decoration: underline;
+      }
+
+    /** Product title */
+    .card .title {
+      color: #000;
+      margin: 0;
+      padding: 10px 10px 5px 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+      .card .title:hover {
+        text-decoration: underline;
+      }
+
+    /** Product image */
+    .card .image {
+      /** Visually place the image above all other content (like the heading) in the parent flex container (.card). */
+      order: -1;
+
+      position: relative;
+      height: 100px;
+      padding: 2px;
+      overflow: hidden;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+      .card .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(.5);
+        transition: all .3s ease-in-out;
+      }
+
+        .card .image:hover img {
+          width: 110%;
+          height: 110%;
+        }
+
+    /** Product description */
+    .card .description {
+      margin: 7px 10px 15px 10px;
+      font-size: 14px;
+      opacity: .8;
+    }
+
+    /** Floating "sale" badge */
+    .card .badge {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      z-index: 1;
+
+      padding: 5px 10px;
+
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+      background-color: rgb(200,0,0);
+    }
+
+    /** Price */
+    .card .price {
+      padding-left: 10px;
+    }
+
+      .card .price .new-price {
+        font-weight: bold;
+      }
+
+      .card .price .original-price {
+        margin-left: 5px;
+        font-size: 14px;
+        font-style: italic;
+        opacity: .5;
+        text-decoration: line-through;
+      }
+
+    /** Rating */
+    .card .rating {
+      margin: 10px 0 15px 10px;
+      color: orange;
+      font-size: 12px;
+    }
+
+      /** "30 reviews" link next to stars */
+      .card .rating .reviews-link {
+        color: rgba(0,0,0,.6);
+        margin-left: 5px;
+      }
+
+        .card .rating .reviews-link:hover {
+          color: black;
+        }
+
+        .card .rating .reviews-link:focus {
+          color: royalblue;
+          outline: 3px dotted royalblue;
+          outline-offset: 2px;
+        }
+
+    /** Hover state = add box shadow, underline the title */
+    .card:hover {
+      border-color: rgba(0,0,0,.4);
+      box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+    }
+
+      .card:hover .image img,
+      .card:focus .image img {
+        filter: grayscale(0);
+      }
+
+      .card a:focus {
+        outline: none;
+      }
+}
+
+
+/**
+  Demo only
+*/
+.note {
+  text-align: center;
+  font-size: 14px;
+  max-width: 960px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  opacity: .8;
+  
+  a {
+    color: black;
+    font-weight: bold;
+    
+    &:hover,
+    &:focus {
+      color: royalblue;
+    }
+  }
+}
+
+  </style>
+</head>
+<body>
+<div class="card-slider">
+  <div class="card" style="float: left;">
+    <!-- Notice that both the image and the product title are in the same link. This can massively reduce the number of redundant tabstops on a page with lots of products, creating a better UX for keyboard-only and screen reader users. -->
+    <a href="https://accessible360.com" target="_blank" class="main-link">
+      <h2 class="title">First product title</h2>
+
+      <!-- This image has a descriptive alt attribute, so it helps to place it after the heading in the DOM. Flexbox is used to place it above the heading visually (see the CSS tab to see how). -->
+      <div class="image">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/blanca-paloma-sanchez-500x500.jpg" alt="Small succulent with long, spikey leaves in a mug-like planter.">
+      </div>
+    </a>
+
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <!-- The badge is placed right next to prices so its read out by screen readers in a more logical way. -->
+    <div class="badge">Sale</div>
+
+    <div class="price">
+      <span class="new-price">$4.49</span>
+      <span class="original-price">
+        <span class="sr-only">Originally:</span>
+        $10.00
+      </span>
+    </div>
+
+    <!-- Star icons don't convey anything to screen readers on their own, so we need to provide screen-reader-only text with their meaning. -->
+    <div class="rating">
+      <span class="sr-only">Rating: 3 out of 5 stars</span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="far fa-star" aria-hidden="true"></span>
+      <span class="far fa-star" aria-hidden="true"></span>
+
+      <a href="https://accessible360.com/#reviews" class="reviews-link">77 reviews</a>
+    </div>
+  </div>
+
+  <div class="card" style="float: left;">
+    <a href="https://accessible360.com" target="_blank" class="main-link">
+      <h2 class="title">Second product title</h2>
+
+      <div class="image">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/erol-ahmed-500x500.jpg" alt="Small succulent with long, spikey leaves in a mug-like planter.">
+      </div>
+    </a>
+
+    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
+
+    <div class="price">
+      <span class="new-price">$19.99</span>
+    </div>
+
+    <div class="rating">
+      <span class="sr-only">Rating: 4 out of 5 stars</span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="far fa-star" aria-hidden="true"></span>
+
+      <a href="https://accessible360.com/#reviews" class="reviews-link">30 reviews</a>
+    </div>
+  </div>
+
+  <div class="card" style="float: left;">
+    <a href="https://accessible360.com" target="_blank" class="main-link">
+      <h2 class="title">Third product title</h2>
+
+      <div class="image">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/armando-castillejo-500x500.jpg" alt="Small succulent with long, spikey leaves in a mug-like planter.">
+      </div>
+    </a>
+
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <div class="badge">Sale</div>
+
+    <div class="price">
+      <span class="new-price">$12.99</span>
+      <span class="original-price">
+        <span class="sr-only">Originally:</span>
+        $15.99
+      </span>
+    </div>
+
+    <div class="rating">
+      <span class="sr-only">Rating: 2 out of 5 stars</span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="far fa-star" aria-hidden="true"></span>
+      <span class="far fa-star" aria-hidden="true"></span>
+      <span class="far fa-star" aria-hidden="true"></span>
+
+      <a href="https://accessible360.com/#reviews" class="reviews-link">0 reviews</a>
+    </div>
+  </div>
+
+  <div class="card" style="float: left;">
+    <a href="https://accessible360.com" target="_blank" class="main-link">
+      <h2 class="title">Fourth product title</h2>
+
+      <div class="image">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/calle-macarone-500x500.jpg" alt="Small succulent with long, spikey leaves in a mug-like planter.">
+      </div>
+    </a>
+
+    <p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
+
+    <div class="price">
+      <span class="new-price">$9.99</span>
+    </div>
+
+    <div class="rating">
+      <span class="sr-only">Rating: 5 out of 5 stars</span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+
+      <a href="https://accessible360.com/#reviews" class="reviews-link">7 reviews</a>
+    </div>
+  </div>
+
+  <div class="card" style="float: left;">
+    <a href="https://accessible360.com" target="_blank" class="main-link">
+      <h2 class="title">Fifth Product title</h2>
+
+      <div class="image">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/galina-n-300x300.jpg" alt="Small succulent with long, spikey leaves in a mug-like planter.">
+      </div>
+    </a>
+
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <div class="price">
+      <span class="new-price">$0.99</span>
+    </div>
+
+    <div class="rating">
+      <span class="sr-only">Rating: 5 out of 5 stars</span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+      <span class="fas fa-star" aria-hidden="true"></span>
+
+      <a href="https://accessible360.com/#reviews" class="reviews-link">9 reviews</a>
+    </div>
+  </div>
+</div>
+
+<p class="note">Built with <a href="https://github.com/Accessible360/accessible-slick" target="_blank">accessible-slick</a>, a fully WCAG 2.0 / 2.1 compliant, drop-in replacement for Slick Slider!</p>
+<script type="text/javascript">
+  
+  $(document).ready(function() {
+  $('.card-slider').slick({
+    dots: false,
+    arrows: true,
+    slidesToShow: 4,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+});
+  
+</script>
+
+</body>
+</html>

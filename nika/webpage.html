@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> simple webpage design.</title>
+	<style type="text/css">
+		*{
+			padding: 0;margin: 0;box-sizing: border-box;
+
+		}
+		body{background: url(https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) left top no-repeat;background-size: cover;}
+		.navbar{width: 100%;background: transparent;overflow: hidden;position: relative;}
+		.navbar li{float: right;border-right: 1px ridge white;list-style-type: none;}
+		li a{text-decoration: none;display: block;color: white;font-size: 22px;font-weight: bolder;text-align: center;padding: 16px 20px;}
+		.div1{background-color: transparent;color: white;position: absolute;top: 50%;left: 50%;text-align: center;transform: translate(-50%,-50%);}
+		.btn{border: 1px solid blue;padding: 15px 20px;border-radius: 10px;font-weight: bolder;}
+		.head{text-shadow: 2px 2px 3px red,2px 2px 5px darkblue;}
+		.btn:hover{border:none;box-shadow: 0px 0px 4px darkgreen,0px 0px 5px darkred,2px 2px 6px yellow; color: red;}
+		li a.active{ background-color:seagreen; }
+		li a:hover:not(.active){background-color: black;}
+
+		
+	</style>
+</head>
+<body>
+	<ul class="navbar">
+		<li style="float: left;"><a href="#" style="font-family: cursive;font-size: 26px;"> simple website</a></li>
+		<li><a href="#" class="active">Home page</a> </li>
+		<li><a href="#">About us</a> </li>
+		<li><a href="#">portfolio</a> </li>
+		<li><a href="page1.html"> Pricing</a></li>
+</ul>
+<div class="div1" style="clear: both;"><h1 class="head">This is free simple website template design.</h1>
+	<br>
+	<p> Here some information regarding the website.</p>
+	<br>
+	<button class="btn">Learn more</button>
+</div>
+
+</body>
+</html>

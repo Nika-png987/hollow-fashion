@@ -1,0 +1,497 @@
+#div1 {
+    background-color:hsl(0, 80%, 50%, 1.0);
+	color: white;
+	padding:10px;}
+
+.main_container1{
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+     padding: 1px 18px;
+z-index: 1000;
+}
+
+.jklogo {
+  padding: 0 0;
+}
+
+nav,
+nav:before,
+nav:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+}
+.menu2{
+    height: 100vh;
+    width: 70vw;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+   
+  
+
+}
+.menu {
+  position: absolute;
+    left: -350px;
+    top: 20px;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    padding: 0px 10px;
+}
+.menu:after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+}
+.menu:hover{
+    color: black;
+    text-decoration: none;
+}
+.menu:hover:after{
+    width: 100%;
+}
+.menu1{
+  padding: 40px 0 30px 696px;
+}
+
+.active {
+  background-color: #f7f7f7;
+}
+
+
+.container1{
+  margin-top:25px;
+}
+
+.shop {
+  margin-right:50px;
+  display: flex;
+  align-items: center;
+  float: right;
+top: 30px;
+}
+
+
+
+
+.dropbtn {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  z-index: 100;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+   left: -350px;
+    top: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  margin-left: 10px;
+  padding-top: 20px;
+  z-index: 1;
+  text-align: left;
+  transform: translateX(-25%);
+  display: flex;
+  padding-left: 25px;
+  opacity: 0;
+ text-decoration: none;
+ font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 13px;
+
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+
+
+}
+
+.dropdown-content a:hover {background-color: none;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 100%;
+
+}
+
+.dropdown:hover .dropbtn {
+  background-color: none;
+
+
+  
+}
+
+.dropdown-content :hover{
+    color: black;
+    text-decoration: none;
+
+  }
+
+.dropbtn {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 0px 10px;
+
+}
+.dropbtn:after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+}
+.dropbtn:hover{
+    color: black;
+    text-decoration: none;
+}
+.dropbtn:hover:after{
+    width: 100%;
+}
+
+
+
+/*=============== CARD ===============*/
+.card__img {
+  display: block;
+  max-width: 100%}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card__container {
+  padding-block: 5rem;
+}
+
+.card__content {
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__article {
+  width: 300px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__image {
+  position: relative;
+  background-color: var(--first-color-light);
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+
+}
+
+.card__data {
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  font-size: 20px;
+  top: -150px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.card__img {
+  width: ;
+  height: 550px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.card__shadow {
+  width: 200px;
+  height: 200px;
+  background-color: var(--first-color-alt);
+  border-radius: 50%;
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  filter: blur(45px);
+}
+
+.card__name {
+  font-size: var(--h2-font-size);
+  color: white;
+  margin-bottom: .75rem;
+}
+
+
+.card__button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: .75rem 1.5rem;
+  border-radius: .25rem;
+  color: var(--dark-color);
+  font-weight: 600;
+ text-decoration: none;
+
+}
+.hr {
+width: 120px;
+    margin: 0rem 110px;
+    height: 3px;
+    background-color: #000;
+    
+}
+
+.hrmain-cont{
+  width: 80%;
+  margin-left:10%;
+ margin-bottom: 0px;
+}
+
+
+/* Swiper class */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color: var(--second-color);
+  display: none;
+  bottom: 600px;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: hsl(212, 32%, 40%);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--second-color);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .card__data {
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 100%;
+
+  }
+
+  .swiper-button-prev {
+    left: -1rem;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.card__img:hover .overlay {
+  height: 20%;
+}
+
+.newarr {
+
+  text-align: center;
+  font-size: 40px;
+   font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
+.card__name1 {
+  font-size: 18px;
+  color: var(--second-color);
+  margin-bottom: .75rem;
+}
+
+.card__image1 {
+  position: relative;
+  background-color: var(--first-color-light);
+  padding-top: 1.5rem;
+ margin-bottom: 4rem;
+
+}
+
+.card__data1 {
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  font-size: 20px;
+  top: -100px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+ 
+
+  footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-decoration: none;
+    margin-top: 100px;
+  }
+  .footer-section {
+    display: flex;
+    
+  }
+  .footer-section div {
+    flex: 1;
+    margin: 10px;
+  }
+  .h32 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+  .fp {
+    font-size: 1.1rem;
+  }
+  .ulf {
+    list-style: none;
+    padding: 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  .ulf li {
+    margin: 5px 0;
+    text-decoration: none;
+  }
+
+  .ulf li a {
+    text-decoration: none;
+    color: black;
+  }
+  .social-media {
+    display: flex;
+    justify-content: center;
+  }
+  .social-media li {
+    margin: 0 0px;
+    font-size: 1.1rem;
+    margin-top: 30px;
+  }
+  .footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 0px;
+    font-size: 1.1rem;
+    display: inline-block;
+  align-items: center;
+  
+
+  }
+  .payment-methods img {
+    margin: 0 20px;
+    float: right;
+    display: inline-block;
+    
+  }
+  .payment-methods .upi{
+    margin-right: 570px;
+  }
+
+  .footer-bottom p {
+    margin-top: 80px;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    size
+  }
+  form input[type="email"] {
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  form button {
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+
+.ing{
+  margin-left: 110px;
+}
+   

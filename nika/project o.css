@@ -1,0 +1,169 @@
+#div1 {
+    background-color:hsl(0, 80%, 50%, 1.0);
+	color: white;
+	padding:10px;}
+
+
+nav,
+nav:before,
+nav:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+}
+.menu2{
+    height: 100vh;
+    width: 70vw;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+  
+
+}
+.menu {
+  position: absolute;
+    left: -350px;
+    top: 20px;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 0px 10px;
+}
+.menu:after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+}
+.menu:hover{
+    color: black;
+    text-decoration: none;
+}
+.menu:hover:after{
+    width: 100%;
+}
+.menu1{
+  padding: 0 0 10px 0;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+.container1{
+  margin-top:50px;
+}
+
+.shop {
+  margin-right:50px;
+}
+
+.fb {
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+
+.dropbtn {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+   left: -350px;
+    top: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  height: 150px;
+  margin-top: 20px;
+  z-index: 1;
+  text-align: center;
+  transform: translateX(-25%);
+  display: flex;
+  opacity: 0;
+ text-decoration: none;
+ font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 13px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+
+.dropdown-content a:hover {background-color: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 100%;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: none;
+
+  
+}
+
+.dropdown-content :hover{
+    color: black;
+    text-decoration: none;
+  }
+
+.dropbtn {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 0px 10px;
+}
+.dropbtn:after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+}
+.dropbtn:hover{
+    color: black;
+    text-decoration: none;
+}
+.dropbtn:hover:after{
+    width: 100%;
+}
+
+
+
+/* Google Fonts - Poppins */
+/*=============== CARD ===============*/
